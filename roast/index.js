@@ -3,8 +3,6 @@ const mongoose = require("mongoose");
 require("dotenv").config(); 
 
 const app = express();
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
 
 // schema for collection in db
 const roastSchema = new mongoose.Schema(
@@ -19,8 +17,12 @@ const Roast = mongoose.model("Roast", roastSchema)
 
 // get request for random joke roast
 app.get("/api/roast", async (req, res) => {
-    let random = await Roast.aggregate().sample(1)
-    res.json({status: 200, roast: random[0].roast});
+    try {
+        let random = await Roast.aggregate().sample(1)
+        res.json({status: 200, roast: random[0].roast});
+    } catch (e) {
+        res.json({status: 400, payload: "failure"})
+    }
 })
 
 // launch app and connect to db
