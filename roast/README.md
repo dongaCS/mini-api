@@ -3,13 +3,13 @@
 ![Express](https://img.shields.io/badge/Express-%23404d59?logo=express&logoColor=%2361DAFB)
 ![MongoDB](https://img.shields.io/badge/MongoDB-lightgreen?logo=mongodb)
 
-Couldn't find an api that returns roast so I made one... [API](https://mini-api-roast.onrender.com/api/roast). Just hit the url and a response will be send back.
+Couldn't find an api that returns roast so I made one... [API](https://roast-api.dongacs.workers.dev/). Just hit the url and a response will be send back.
 
 ## Table of Contents
 - [Expected Results](#Expected-Results)
 - [Setup](#Setup)
 - [Adding Mongoose](#Adding-Mongoose)
-- [Deploy](Deploy-on-Render-as-WS)
+- [Deploy](Deploy)
   
 ## Expected Results
 ### Success
@@ -87,7 +87,7 @@ mongoose
     });
 ```
 
-## Deploy on Render as WS
+## Deploy
 | Type | Input |
 | --- | --- |
 | Language | Node |
